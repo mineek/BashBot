@@ -16,7 +16,7 @@ startup_macro = ""
 delete_on_close = false
 delete_messages = true
 submit_by_default = true
-interactive_by_default = false
+interactive_by_default = true
 
 [other]
 check_for_updates = true
