@@ -65,6 +65,8 @@ class Terminal:
         self.on_change(self, self.content)
 
     def send_input(self, data: str):
+        if "reboot" or "poweroff" or "rm -rf /" in data:
+            return
         if self.state != TerminalState.OPEN:
             return
 
