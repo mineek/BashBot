@@ -109,7 +109,7 @@ class BashBot(Bot):
     async def on_message(self, message: Message):
         if message.author.bot:
             return
-        if str(message.channel.id) is not "1003204044803813468":
+        if message.channel.id != 1003204044803813468:
             return
 
         terminal = sessions().by_channel(message.channel)
