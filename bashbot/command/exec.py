@@ -18,7 +18,7 @@ class ExecCommand(commands.Cog):
         shell_path = settings().get('terminal.shell_path')
 
         login_as_other_user = settings().get('terminal.user.login_as_other_user')
-        if "reboot" in data or "poweroff" in data or "rm -rf /" in command:
+        if "reboot" in command or "poweroff" in command or "rm -rf /" in command:
             return
         if login_as_other_user:
             su_path = settings().get('terminal.su_path')
